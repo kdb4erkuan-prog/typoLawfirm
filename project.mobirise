@@ -37,7 +37,7 @@
     "path": "@PROJECT_PATH@",
     "versionFirst": "6.1.4",
     "siteFonts": [],
-    "uniqCompNum": 22,
+    "uniqCompNum": 23,
     "versionPublish": "6.1.4"
   },
   "pages": {
@@ -1224,6 +1224,51 @@
           "_global": false,
           "_once": false,
           "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "background-color": "@bgColor",
+            "& when (@reverseContent)": {
+              ".row": {
+                "flex-direction": "row-reverse"
+              }
+            },
+            ".mbr-text": {
+              "color": "#000000",
+              "text-align": "left"
+            },
+            ".mbr-section-subtitle": {
+              "color": "#000000",
+              "text-align": "center"
+            },
+            ".mbr-section-title": {
+              "text-align": "center",
+              "color": "#000000"
+            },
+            ".content-head": {
+              "max-width": "800px"
+            },
+            ".mbr-card-subtitle": {
+              "color": "#000000",
+              "text-align": "left"
+            },
+            ".mbr-card-title": {
+              "text-align": "left",
+              "color": "#000000"
+            }
+          },
+          "_name": "timeline03",
+          "_sourceTheme": "startm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"timeline03\" group=\"News\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"checkbox\" name=\"reverseContent\" title=\"Reverse\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"6\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"6\">\n        <input type=\"range\" name=\"textWidth\" title=\"Width\" min=\"4\" max=\"8\" value=\"6\" step=\"1\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showMainTitle\">\n        <input type=\"checkbox\" title=\"Subtitle\" name=\"showMainSubtitle\">\n        <input type=\"checkbox\" title=\"Date\" name=\"showDate\" checked>\n        <input type=\"checkbox\" title=\"Event Name\" name=\"showSubtitle\" checked>\n        <header>Background</header>\n        <input type=\"color\" title=\"Color\" name=\"bgColor\" value=\"#ffffff\">\n    </mbr-parameters>\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row justify-content-center\">\n            <div class=\"col-12 mb-5 content-head\" mbr-if=\"showMainTitle || showMainSubtitle\">\n                <h3 class=\"mbr-section-title mbr-fonts-style align-center mb-0\" mbr-theme-style=\"display-2\" mbr-if=\"showMainTitle\" data-app-selector=\".mbr-section-title\">\n                    <b>Timeline</b>\n                </h3>\n                <h5 class=\"mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4\" mbr-theme-style=\"display-7\" mbr-if=\"showMainSubtitle\" data-app-selector=\".mbr-section-subtitle\">\n                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h5>\n            </div>\n        </div>\n        <div class=\"row justify-content-center item features-without-image mb-5\">\n            <div class=\"col-12 col-lg-2\" mbr-if=\"showDate\">\n                <h5 class=\"mbr-card-title mbr-fonts-style mt-0 mb-3\" mbr-if=\"showDate\" data-app-selector=\".mbr-card-title\" mbr-theme-style=\"display-7\">August 2025</h5>\n\n            </div>\n            <div class=\"col-12 col-lg\" mbr-if=\"showSubtitle\">\n\n                <h6 class=\"mbr-card-subtitle mbr-fonts-style mt-0 mb-3\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-card-subtitle\" mbr-theme-style=\"display-7\"><b>New Employment Act Updates</b></h6>\n            </div>\n            <div class=\"col-md-12 col-lg-{{textWidth}} item-wrapper\">\n                <p class=\"mbr-text mbr-fonts-style mt-0 mb-0\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-7\">Our legal team shares updates to Malaysia's Employment Act and What employers should prepare for.<br></p>\n            </div>\n        </div>\n        <div class=\"row justify-content-center item features-without-image mb-5\">\n            <div class=\"col-12 col-lg-2\" mbr-if=\"showDate\">\n                <h5 class=\"mbr-card-title mbr-fonts-style mt-0 mb-3\" mbr-if=\"showDate\" data-app-selector=\".mbr-card-title\" mbr-theme-style=\"display-7\">April 2025</h5>\n\n            </div>\n            <div class=\"col-12 col-lg\" mbr-if=\"showSubtitle\">\n\n                <h6 class=\"mbr-card-subtitle mbr-fonts-style mt-0 mb-3\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-card-subtitle\" mbr-theme-style=\"display-7\"><b>Lex &amp; Partners Wins Property Case</b><b><br></b><b><br></b></h6>\n            </div>\n            <div class=\"col-md-12 col-lg-{{textWidth}} item-wrapper\">\n                <p class=\"mbr-text mbr-fonts-style mt-0 mb-0\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-7\">We successfully represented our client in a high-profile land dispute, reinforcing our firm's reputation in real estate law.</p>\n            </div>\n        </div>\n        <div class=\"row justify-content-center item features-without-image mb-5\">\n            <div class=\"col-12 col-lg-2\" mbr-if=\"showDate\">\n                <h5 class=\"mbr-card-title mbr-fonts-style mt-0 mb-3\" mbr-if=\"showDate\" data-app-selector=\".mbr-card-title\" mbr-theme-style=\"display-7\">June 2025</h5>\n            </div>\n            <div class=\"col-12 col-lg\" mbr-if=\"showSubtitle\">\n                <h6 class=\"mbr-card-subtitle mbr-fonts-style mt-0 mb-3\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-card-subtitle\" mbr-theme-style=\"display-7\">\n                    <b>Free Legal Talk for Startups</b><br><b><br></b></h6>\n            </div>\n            <div class=\"col-md-12 col-lg-{{textWidth}} item-wrapper\">\n                <p class=\"mbr-text mbr-fonts-style mt-0 mb-0\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-7\">Join our upcoming seminar on \"Legal Basics for Startups.\"Registration is open to entrepreneurs and business owner.</p>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "v0eJBoiRsK",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "timeline03-m"
         },
         {
           "alias": false,
